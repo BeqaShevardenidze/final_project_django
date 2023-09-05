@@ -1,0 +1,69 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href=" {% static 'home/css/main.css' %} ">
+    <link rel="stylesheet" href=" {% static 'home/css/main.css' %} ">
+    <link rel="icon" href="{% static 'home/img/main-logo.png' %}">
+    <title> {% block title %} {% endblock %} </title>
+</head>
+<body>
+    <div class="header">
+
+        <div class="icon">
+            <a href="{% url 'home' %}">
+                <img src="{% static 'home/img/main-logo.png' %}" alt="main-logo">
+                IQ-test.org
+            </a>
+        </div>
+
+        <div class="menu">
+            <ul>
+                <li>
+                    <a href="{% url 'home' %}" class="menu-text-color">მთავარი</a>
+                </li>
+                
+                <li>
+                    <a href="https://beqashevardenidze.github.io/" class="menu-text-color">ჩვენს შესახებ</a>
+                </li>
+
+                {% if user.is_authenticated %}
+                    <li class="logout">
+                        <a href="{% url 'logout' %}">გამოსვლა</a>
+                    </li>
+                {% else %}
+                    <li class="login">
+                        <a href="{% url 'login' %}">შესვლა</a>
+                    </li>
+                    <li class="reg">
+                        <a href="{% url 'register' %}">რეგისტრაცია</a>
+                    </li>
+                {% endif %}
+    
+
+            </ul>
+        </div>
+    </div>
+
+    <main>
+        {% block content %} 
+    
+        {% endblock %} 
+    </main>
+
+
+    <div class="footer">
+
+        <div class="signature">
+            <p>&copy; 2023 IQ-Test.org. All rights reserved. | Designed by Beka Sevardenidze</p>
+        </div>
+
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,418 @@
+body{
+    background-color: #2c2c2c;
+    color: #fce3e3;
+}
+
+/* -------------------------------header------------------------------- */
+.header{
+    display: flex;
+    background-color: #181818;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.icon{
+    padding: 20px;
+}
+
+.icon a{
+    color: rgb(123, 220, 255);
+    text-decoration: none;
+    font-size: 30px;
+    transition: all .3s linear;
+}
+.icon a:hover{
+    color: rgb(4, 152, 206);
+}
+
+.icon a img {
+    width: 100px;
+    transition: all .3s linear;
+}
+.icon a img:hover{
+    transform: scale(1.05);
+}
+
+.menu{
+    padding: 20px;
+}
+
+.menu ul{
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.menu ul li a{
+    font-size: 25px;
+    text-decoration: none;
+    transition: all .5s linear;
+}
+
+.menu-text-color{
+    color: #eb5959;
+}
+.menu-text-color:hover{
+    color: #b6e742;
+}
+
+.login a{
+    background-color: #8aff54;
+    /* color: #e92424; */
+    color: #000000;
+    padding: 0 20px 5px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    transition: all .3s linear;
+}
+.login a:hover{
+    border-radius: 0 10px ;
+    /* color: #8f2c2c; */
+    color: #fdfdfd;
+}
+
+.logout a{
+    background-color: #bc0505;
+    color: #fdfdfd;
+    padding: 0 20px 5px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    transition: all .3s linear;
+}
+.logout a:hover{
+    border-radius: 0 10px ;
+}
+
+.reg a{
+    /* background-color: #54f4ff; */
+    background-color: cadetblue;
+    /* color: #e92424; */
+    color: #fce3e3;
+    padding: 0 20px 5px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    transition: all .3s linear;
+}
+.reg a:hover{
+    border-radius: 0 10px ;
+    color: #220c0c;
+}
+
+/* -------------------------------footer------------------------------- */
+.footer{
+    /* background-color: #181818; */
+    text-align: center;
+}
+
+/* -------------------------------main------------------------------- */
+main{
+    /* min-height: 76vh; */
+    min-height: 100vh;
+}
+
+
+/* -------------------------------Login------------------------------- */
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #181818;
+    height: 500px;
+    border-radius: 50px;
+}
+
+.form form{
+    display: block;
+    text-align: center;
+}
+
+.form form label{
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+
+.form form input{
+    margin-bottom:20px;
+    width: 300px;
+    height: 40px;
+    border-radius: 20px;
+    border: 0;
+    text-align: center;
+}
+
+.form form button{
+    margin-bottom: 30px;
+    margin-top: 20px;
+    width: 100px;
+    height: 40px;
+    border: 0;
+    background-color: cadetblue;
+    border-radius:20px;
+    transition: all .3s linear;
+}
+.form form button:hover{
+    border-radius: 0 10px ;
+}
+
+.pass-res a{
+    color: #eb5959;
+    text-decoration: none;
+    transition: all .3s linear;
+}
+.pass-res a:hover{
+    text-decoration: underline;
+    color: #b6e742;
+
+}
+
+/* -------------------------------reset from------------------------------- */
+.res-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #181818;
+    height: 500px;
+    border-radius: 50px;
+}
+
+.res-form form{
+    display: flex;
+    gap: 50px;
+    text-align: center;
+}
+
+.res-form form label{
+    font-size: 20px;
+}
+
+.res-form form input{
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+}
+
+.res-form form button:hover{
+    border-radius: 30px;
+    background-color: cadetblue;
+    transition: all .3s linear;
+}
+.res-form form button:hover{
+    border-radius: 0 10px ;
+}
+
+h1{
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* -------------------------------Loged user page------------------------------- */
+
+.user{
+    display: flex;
+    gap: 30px;
+    justify-content: end;
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+.user_in{
+    padding: 10px;
+}
+
+.user_name{
+    padding: 10px;
+}
+
+.user-menu{
+    display: flex;
+    justify-content: center;
+}
+
+.user-menu ul{
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.user-menu ul li a{
+    text-decoration: none;
+    color: #b6e742;
+    font-size: 25px;
+    transition: all .3s linear;
+}
+.user-menu ul li a:hover{
+    color: #eb5959;
+}
+
+
+/* -------------------------------main content------------------------------- */
+
+.element-with-background {
+    /* background-image: url("{% static 'home/img/background1.jpg' %}"); */
+    background-image: url("../img/home-1.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: grid;
+    justify-content: start;
+    align-items: center;
+}
+.element-with-background h2{
+    color: rgb(135, 233, 238);
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-left: 20px;
+    font-weight: 100;
+    font-size: 40px;
+}
+.element-with-background h2 small{
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 20px;
+}
+
+section{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+article{
+    height: 500px;
+    /* background-color: #eb5959; */
+    display: grid;
+    justify-content: center;
+}
+
+.art1{
+    background-image: url("../img/steve.jpg");
+    /* height: 100vh; */
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transition: all .3s linear;
+    display: grid;
+    align-items: end;
+    justify-content: center;
+}
+.art1:hover p{
+    visibility: visible;
+}
+
+.art1 p{
+    padding: 20px;
+    background-color: #181818;
+    transition: all .3s linear;
+    visibility: hidden;
+    text-align: center;
+}
+
+
+.art2{
+    background-image: url("../img/Elon1.jpg");
+    /* height: 100vh; */
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: -100px;
+    transition: all .3s linear;
+    display: grid;
+    align-items: end;
+    justify-content: center;
+}
+.art2:hover p{
+    visibility: visible;
+}
+
+.art2 p{
+    padding: 20px;
+    background-color: #181818;
+    transition: all .3s linear;
+    visibility: hidden;
+    text-align: center;
+}
+
+.art3{
+    background-image: url("../img/nikola.jpg");
+    /* height: 100vh; */
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all .3s linear;
+    display: grid;
+    align-items: end;
+    justify-content: center;
+}
+.art3:hover p{
+    visibility: visible;
+}
+
+.art3 p{
+    padding: 20px;
+    background-color: #181818;
+    transition: all .3s linear;
+    visibility: hidden;
+    text-align: center;
+}
+
+
+
+/* -------------------------------test form------------------------------- */
+
+.test-form .input{
+    width: 250px;
+    height: 40px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.test-form .send{
+    width: 140px;
+    height: 50px;
+    border-radius: 20px;
+    background-color: #5fce62;
+    border: 0;
+    transition: all .3s linear;
+}
+.test-form .send:hover{
+    border-radius: 0 10px ;
+}
+
+.test-form .reset{
+    width: 140px;
+    height: 50px;
+    border-radius: 20px;
+    background-color: #c42722;
+    border: 0;
+    transition: all .3s linear;
+}
+.test-form .reset:hover{
+    border-radius: 0 10px ;
+}
+
+
+/* -------------------------------test form------------------------------- */
+
+.section{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.article{
+    height: 200px;
+    background-color:#181818;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}

@@ -1,0 +1,24 @@
+{% extends 'home/layout.html' %}
+
+{% block title %} აიტი ვაკანსიები {% endblock %}
+
+{% block content %}
+    <h1>აიტი ვაკანსიები</h1>
+    <hr>
+
+    {% if user.is_authenticated %}
+
+        <div class="section">
+
+            {% for i in key %}
+                <div class="article">
+                    {% for j in i %}
+                            {{ j }} <br>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+
+
+        </div>
+    {% endif %}
+{% endblock %}

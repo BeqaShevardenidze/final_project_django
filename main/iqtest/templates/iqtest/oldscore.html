@@ -1,0 +1,38 @@
+{% extends 'home/layout.html' %}
+
+{% block title %} ძველი ქულა {% endblock %}
+
+{% block content %}
+    <h1>ძველი ქულა</h1>
+    <hr>
+    {% if user.is_authenticated %}
+        <div class="user">
+            <p class="user_in">User: </p>
+            <p class="user_name">{{ user }}</p>
+        </div>
+
+        <div class="user-menu">
+            <ul>
+                <li>
+                    <a href="{% url 'iqtest' %}">IQ ტესტი</a>
+                </li>
+                <li>
+                    <a href="{% url 'oldscore' %}">ძველი ქულები</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="score" style="text-align: center; font-size:20px">
+            <ul>
+                {% for user_score in user_scores %}
+                    <p class="container">
+                        User: {{ user_score.user }} | Score: {{ user_score.score }}
+                        <hr>
+                    </p>
+                {% endfor %}
+            </ul>
+        </div>
+
+    {% endif %}
+
+{% endblock %}

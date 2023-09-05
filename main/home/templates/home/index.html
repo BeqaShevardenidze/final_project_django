@@ -1,0 +1,62 @@
+{% extends 'home/layout.html' %}
+
+{% block title %} მთავარი გვერდი {% endblock %}
+
+{% block content %}
+    <h1>მთავარი გვერდი</h1>
+
+    {% if user.is_authenticated %}
+    <hr style="padding: 0;">
+    <div class="user">
+        <p class="user_in">User: </p>
+        <p class="user_name">{{ user }}</p>
+    </div>
+
+    <div class="user-menu">
+        <ul>
+            <li>
+                <a href="{% url 'iqtest' %}">IQ ტესტი</a>
+            </li>
+            <li>
+                <a href="{% url 'oldscore' %}">ძველი ქულები</a>
+            </li>
+            <li>
+                <a href="{% url 'itjobs' %}">აიტი ვაკანსიები</a>
+            </li>
+        </ul>
+    </div>
+
+    {% endif %}
+
+    <div class="element-with-background">
+        <h2>
+            კითხვა, რომელიც ხშირად მაწუხებს:
+            <br> მე ვარ გიჟი თუ სხვები?
+            <br><br> <small>ალბერტ აინშტაინი</small>
+        </h2>
+    </div>    
+
+
+    <section>
+        <article class="art1">
+            <p>
+                „როდესაც რაღაც კარგად გამოგდის, ამაზე დიდხანს არ შეჩერდე. ეცადე, კიდევ უფრო უკეთესი რამ შექმნა“
+                <br>
+                <small>სტივ ჯობსი</small>
+            </p>
+        </article>
+        <article class="art2">
+            <p>
+                „ყოველთვის ეცადეთ გახდეთ იმის ნაწილი, რაც სამყაროს შეცვლის“
+                <br>
+                <small>ილონ მასკი</small>
+        </article>
+        <article class="art3">
+            <p>
+                „ყველაფერი, რაც კი ოდესმე გამიკეთებია მე ვაკეთებდი კაცობრიობისთვის, სამყაროსთვის — რომელშიც არ იქნება დამცირება და ღარიბთა შევიწროვება მდიდრების მიერ“
+                <br>
+                <small>ნიკოლა ტესლა</small>
+        </article>
+    </section>
+
+{% endblock %}

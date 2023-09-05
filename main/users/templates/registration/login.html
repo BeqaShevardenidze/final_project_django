@@ -1,0 +1,33 @@
+{% extends 'home/layout.html' %}
+{% load static %}
+{% block title %} შესვლა {% endblock %}
+
+{% block content %}
+    <h1>შესვლა</h1>
+    <hr>
+    
+    {% if form.errors %}
+        <p>{{ form.errors.error }}</p>
+    {% endif %}
+
+    <div class="form container">
+        <form action="{% url 'login' %}" method="post" class="form">
+            {{ form }}
+
+            {% csrf_token %}
+
+            <br>
+
+            <button type="submit" class="btn btn-success">შესვლა</button>
+
+            <div class="pass-res">
+                <a href="{% url 'password_reset' %}">პაროლის აღდგენა</a>
+            </div>
+
+        </form>
+
+    
+    </div>
+
+
+{% endblock %}

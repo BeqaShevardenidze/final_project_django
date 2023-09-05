@@ -1,0 +1,90 @@
+{% extends 'home/layout.html' %}
+
+{% block title %} IQ ტესტი {% endblock %}
+
+{% block content %}
+    <h1>IQ ტესტი</h1>
+    <hr>
+    {% if user.is_authenticated %}
+        <form action="{% url 'iqtest' %}" method="post" class="container test-form">
+            {% csrf_token %}
+
+            <div class="user">
+                <p class="user_in">User: </p>
+                <p class="user_name">{{ user }}</p>
+            </div>
+
+            <input type="text" value="{{user}}" style="display: none" name="username">
+
+            <label for="">კითხვა 1</label>
+            <p>რომელი რიცხვი მიჰყვება ლოგიკურად ამ სერიას: 1, 4, 9, 16, 25, _?</p>
+            <input class="input" type="text" id="option1-1" name="options1"> <br>
+        
+            <br><hr>
+
+            <label for="">კითხვა 2</label>
+            <p>მარიამის მამას ჰყავს ხუთი ქალიშვილი: 1. ნანა, 2. ნენე, 3. ნინი, 4. ნონო. რა ჰქვია მეხუთე ქალიშვილს?</p>
+            <input class="input" type="text" name="options2"><br>
+        
+            <br><hr>
+
+            <label for="">კითხვა 3</label>
+            <p>რამდენი გვერდი აქვს 6 კუთხედს</p>
+            <input class="input" type="text" name="options3"><br>
+        
+            <br><hr>
+
+            <label for="">კითხვა 4</label>
+            <p>რომელი პლანეტას ეძახიან წითელ პლანეტას?</p>
+            <input class="input" type="text" name="options4"><br>
+        
+            <br><hr>
+
+            <label for="">კითხვა 5</label>
+            <p>ყველაზე დიდი ძუძუმწოვარი ცხოველია?</p>
+            <input class="input" type="text" name="options5"><br>
+        
+            <br><hr>
+
+            <label for="">კითხვა 6</label>
+            <p>თუ თვითმფრინავი ჩამოვარდა შეერთებული შტატებისა და კანადის საზღვარზე, სად უნდა დაკრძალონ გადარჩენილები?</p>
+            <input type="radio" id="option6-1" name="options6" value="option6-1"> კანადაში. <br>
+            <input type="radio" id="option6-2" name="options6" value="option6-2"> შტატებში. <br>
+            <input type="radio" id="option6-3" name="options6" value="option6-3"> გააჩნია რომელი ქვეყნის მოქალაქეა. <br>
+            <input type="radio" id="option6-4" name="options6" value="option6-4"> გადარჩენილების დაკრძალვა არ შეიძლება. <br>
+        
+            <br><hr>
+
+            <label for="">კითხვა 7</label>
+            <p>რომელი ცხოველი გამოსცემს ასეთ ხმას? 'მიაუ'</p>
+            <input type="radio" id="option7-1" name="options7" value="option7-1"> ჟირაფი. <br>
+            <input type="radio" id="option7-2" name="options7" value="option7-2"> კატა. <br>
+            <input type="radio" id="option7-3" name="options7" value="option7-3"> კოალა. <br>
+            <input type="radio" id="option7-4" name="options7" value="option7-4"> მარტორქა. <br>
+        
+            <br><hr>
+
+            <label for="">კითხვა 8</label>
+            <p>რა ჰქვია ენას, რომელიც გამოიყენება ვებ გვერდების სტრუქტურის აღსაწერად?</p>
+            <input class="input" type="text"name="options8"><br>
+        
+            <br><hr>
+
+            <label for="">კითხვა 9</label>
+            <p>რამდენი ფეხი აქვს ობობას?</p>
+            <input class="input" type="text"name="options9"><br>
+        
+            <br><hr>
+
+            <label for="">კითხვა 10</label>
+            <p>რომელი გაზი იცავს დედამიწას მავნე ულტრაიისფერი სხივებისგან?</p>
+            <input class="input" type="text"name="options10"><br>
+        
+            <br><hr>
+            
+            <button type="submit" class="send">გაგზავნა</button>
+            <button type="reset" class="reset">რესეტი</button>
+
+        </form>
+    {%endif%}
+{% endblock %}
